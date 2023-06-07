@@ -1,0 +1,273 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "The Bedroom",
+      "description": "As you stand in your bedroom, your heart pounding in your chest, \nyou quickly take stock of your surroundings. You need to act fast. \nThe first priority is to find a way out of your house and assess the situation outside.\nyou have two options: The living room (south) or the bathroom (east)",
+      "coordinates": [0, 0],
+      "prompts": [ ],
+      "items":[
+        {
+          "name": "first aid kit",
+          "description": "A well-stocked first aid kit containing bandages, antiseptic, and painkillers",
+          "can_pick_up": true
+        },
+        {
+          "name": "baseball bat",
+          "description": "A wooden baseball bat, worn and splintered but still sturdy",
+          "can_pick_up": true
+        }
+      ]
+
+    },
+    {
+      "id": 2,
+      "name": "The Bathroom",
+      "description": "You step into the bathroom, feeling the cramped space surround you. \nThe flickering light barely illuminates the worn tiles on the floor. \nThe air carries a musty odor, a reminder of the neglect this room has endured. \nYou have two options: (south) you see a door leading to the hallway, \nor (east) a small window offers an escape onto the roof",
+      "coordinates": [0, 1],
+      "prompts": [ ],
+      "items":[
+        {
+          "name": "razor",
+          "description": "A worn razor with a sharp blade rests on the counter, ready for a close shave",
+          "can_pick_up": true
+        },
+        {
+          "name": "floss",
+          "description": "A roll of dental floss sits nearby, a tool to keep your teeth clean and healthy in the midst of chaos",
+          "can_pick_up": true
+        }
+        ]
+    },
+    {
+      "id": 3,
+      "name": "The Roof",
+      "description": "As you cautiously climb onto the roof through a small opening in the bathroom ceiling, \nyou find yourself standing on a weathered surface, cracked and worn by the elements. \nThe once bright red tiles have faded over time, giving the rooftop an eerie ambiance. \nThe only exit from the roof is to the (west), leading back into the bathroom, its too far to jump down",
+      "coordinates": [0, 2],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "look around",
+          "response": "You scan the area from the rooftop, taking in the bleak landscape that stretches before you. In the distance, \nyou spot the skeletal remains of a once-bustling town. Among the crumbling buildings, your eyes fixate on the glimmering facade of a shopping mall. \nIt stands as a beacon of potential resources and shelter amidst the chaos. Your gaze then shifts to the outskirts of town, \nwhere a tunnel entrance emerges, seemingly untouched by the undead. It offers a possible escape route to safety. \nArmed with this knowledge, you steel yourself for the challenges ahead, ready to navigate the dangers and make your way towards the mall and the tunnel."
+        }
+      ],
+      "items": [
+        {
+          "name": "rusty crowbar",
+          "description": "a rusty crowbar lying near the edge of the roof. Its worn handle suggests it has seen its fair share of use, \npossibly for breaking into or out of places.",
+          "can_pick_up": true
+        },
+        {
+          "name": "Telescope",
+          "description": "The second object is an old, weathered telescope, fixed on top of a tripod. \nIt seems to have been used for stargazing in the days before chaos descended upon the world.",
+          "can_pick_up": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "The Living room",
+      "description": "You take a deep breath, steeling your nerves, and decide to quietly approach the room \nfrom where the growling sound originated. Slowly and cautiously, you make your way into the living room, \ntrying to minimize any noise that might alert the creature near by.\n\nAs you reach the room, you peak your head around the corner \nlooking for any movement or signs of danger. \nThe growling becomes more distinct, accompanied by occasional shuffling sounds. \nIt's clear that there is a zombie lurking in here\n\n with a steady hand, you reach for your backpack, it's important to be prepared for what might happen",
+      "coordinates": [1, 0],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "search your bag for a weapon",
+          "response": "You search your backpack for something that can be used as a weapon and find a "
+        }
+      ],
+      "items": [
+        {
+          "name": "metal pipe",
+          "description": "A sturdy metal pipe, slightly rusted but still useful as a makeshift weapon.",
+          "can_pick_up": true
+        },
+        {
+          "name": "family photo",
+          "description": "A faded photograph depicting happier times, serving as a bittersweet reminder of what once was.",
+          "can_pick_up": false
+        }
+        ]
+    },
+    {
+      "id": 5,
+      "name": "The Hallway",
+      "description": "You decide to head towards the hallway to investigate further. \nWith cautious steps, you leave your bedroom and enter the dimly lit hallway. \nThe air feels heavy, and the silence is eerie. As you glance around, \nyou notice several closed doors, each leading to different parts of your house.\nSuddenly, you hear a low, guttural growl coming from one of the nearby rooms. \nThe sound sends shivers down your spine, confirming your worst fears: \nThe zombies have infiltrated your house. It's crucial to remain calm and think on your feet.",
+      "coordinates": [1, 1],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "",
+          "response": ""
+        },
+        {
+          "id": 2,
+          "prompt": "look around",
+          "response": "As you survey the dimly lit hallway, shadows dance along the peeling wallpaper, creating an eerie atmosphere. Flickering lights cast intermittent illumination, revealing worn carpeting underfoot. The sounds of shuffling feet grow louder, signifying the presence of approaching zombies. Amidst the gloom, you notice a glint on the floor and spot a set of keys. They may prove useful in unlocking doors or vehicles, potentially providing an escape route or access to valuable resources. Exercise caution as you navigate this treacherous corridor, knowing that danger lurks around every corner."
+        }
+      ],
+      "items": [
+        {
+          "name": "keys",
+          "description": "A set of keys, jingling softly as you pick them up. They may unlock doors or vehicles, opening up new possibilities for exploration or escape.",
+          "can_pick_up": true
+        },
+        {
+          "name": " ",
+          "description": "",
+          "can_pick_up": false
+        }
+        ]
+    },
+    {
+      "id": 6,
+      "name": "The Garage",
+      "description": "A dimly lit, musty space filled with abandoned tools and discarded vehicle parts. The remnants of failed attempts to escape lie scattered amidst oil stains and broken windows.",
+      "coordinates": [2, 0],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "listen carefully",
+          "response": ""
+        },
+        {
+          "id": 2,
+          "prompt": "look around",
+          "response": ""
+        }
+      ],
+      "items": [
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": true
+        },
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": false
+        }
+        ]
+    },
+    {
+      "id": 7,
+      "name": "The Street",
+      "description": "A desolate, eerie stretch of cracked asphalt. Abandoned cars line the sides, their windows shattered and doors left open. Silence reigns, broken only by the faint rustle of wind through discarded debris",
+      "coordinates": [2, 1],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "listen carefully",
+          "response": ""
+        },
+        {
+          "id": 2,
+          "prompt": "look around",
+          "response": ""
+        }
+      ],
+      "items": [
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": true
+        },
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": false
+        }
+        ]
+    },
+    {
+      "id": 8,
+      "name": "The Highway",
+      "description": " A desolate stretch of asphalt, overgrown with weeds and abandoned vehicles. The distant moans of the undead mix with the sound of wind whistling through empty shells of cars",
+      "coordinates": [2, 2],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "listen carefully",
+          "response": ""
+        },
+        {
+          "id": 2,
+          "prompt": "look around",
+          "response": ""
+        }
+      ],
+      "items": [
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": true
+        },
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": false
+        }
+        ]
+    },
+    {
+      "id": 9,
+      "name": "The Mall",
+      "description": " A once bustling hub of commerce now reduced to a labyrinth of debris and broken storefronts. Shattered mannequins and overturned kiosks are haunting reminders of past human presence.",
+      "coordinates": [2, 3],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "listen carefully",
+          "response": ""
+        },
+        {
+          "id": 2,
+          "prompt": "look around",
+          "response": ""
+        }
+      ],
+      "items": [
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": true
+        },
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": false
+        }
+        ]
+    },
+    {
+      "id": 10,
+      "name": "The Tunnel",
+      "description": "A narrow, claustrophobic passage leading deep underground. The walls are damp, with patches of moss and eerie, echoing footsteps reverberating through the darkness.",
+      "coordinates": [3, 2],
+      "prompts": [
+        {
+          "id": 1,
+          "prompt": "listen carefully",
+          "response": ""
+        },
+        {
+          "id": 2,
+          "prompt": "look around",
+          "response": ""
+        }
+      ],
+      "items": [
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": true
+        },
+        {
+          "name": "",
+          "description": "",
+          "can_pick_up": false
+        }
+        ]
+    }
+  ]
+}
