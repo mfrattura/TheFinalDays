@@ -1,4 +1,4 @@
-from .item import Item
+from item import Item
 
 
 class BackPack:
@@ -6,12 +6,11 @@ class BackPack:
     BackPack Class
     ToDo: [X] Instantiate backpack
     ToDo: [X] Add Item
-    ToDo: [ ] Remove Item
-    ToDo: [ ] List Items
+    ToDo: [X] Remove Item
+    ToDo: [X] List Items
     ToDo: [X] Count items
-    ToDo: [ ] in backpack (Search for Item - Student to do)
+    ToDo: [X] in backpack (Search for Item - Student to do)
     ToDo: [X] Sort Items
-
     """
 
     def __init__(self, items):
