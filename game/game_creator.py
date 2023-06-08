@@ -6,10 +6,20 @@ from game.map import Map
 
 
 class GameCreator:
+    """
+    Class responsible for creating the game world and set-up
+
+    """
     def __init__(self):
         self.player_map = Map(size=(4, 4))
 
     def create_world(self, filename):
+        """
+        Creates the game world based on the provided JSON file
+
+        :param filename:
+
+        """
         with open(filename, 'r') as file:
             data = json.load(file)
 
@@ -23,7 +33,9 @@ class GameCreator:
                     location_data['name'],
                     location_data['description'],
                     prompts,
-                    [Item(*item.values()) for item in location_data['items'] if isinstance(item, dict)]
+                    [Item(*item.values()) for item in location_data['items']
+                     if isinstance(item, dict)],
+                    location_data.get('is_dangerous', False)
                 )
                 self.player_map.add_location(
                     location_data['coordinates'][0],
@@ -31,11 +43,22 @@ class GameCreator:
                     location)
 
     def setup_game(self, filename):
+        """
+        Sets up the game by creating the game world and returning the player map
+        :param filename:
+        :return: the player map representing the game world
+        """
         self.create_world(filename)
         return self.player_map
 
+
+
     @staticmethod
     def the_goal():
+        """
+        Displays the goal of the game to the player
+
+        """
         print('In this zombie adventure game, your goal is to navigate through \n'
               'various locations, including your bedroom, bathroom, living \n'
               'room, hallway, garage, street, highway, mall, and tunnel, while \n'
@@ -49,6 +72,10 @@ class GameCreator:
 
     @staticmethod
     def intro_scene():
+        """
+        Displays the introductory scene of the game to the player
+
+        """
         print('*------------------------------------------------------------------------------------*')
         print('You wake up in your bedroom, feeling groggy and disoriented. As you sit up in bed you \n'
               'notice a strange smell in the air, something is wrong.. you glance around your room \n'
@@ -63,6 +90,10 @@ class GameCreator:
 
     @staticmethod
     def show_controls():
+        """
+        Shows the controls of the game to the player
+
+        """
         print("What would you like to do?")
         print("Options:")
         print("  - Press 'l' to look around.")

@@ -4,6 +4,9 @@ from game.item import Item
 
 
 class Map:
+    """
+    Class representing the game map
+    """
     def __init__(self, size=(4, 4)):
         self.x, self.y = size
         self.grid: list[[Location]] = []
@@ -15,7 +18,12 @@ class Map:
                 self.grid[i].append(None)
 
     def serialize(self):
-        with open('../map.txt', 'w') as file:
+        """
+        Serialize the map grid and save it to a file.
+        :return: map.txt
+        """
+        file_path = 'map.txt'
+        with open(file_path, 'w') as file:
             for row in self.grid:
                 for col in row:
                     if col is None:
@@ -26,12 +34,32 @@ class Map:
                 file.write('\n')
 
     def add_location(self, x: int, y: int, location: Location):
+        """
+        Add a location to the map grid at the specified coordinates
+        :param x:
+        :param y:
+        :param location:
+        """
         self.grid[x][y] = location
 
     def set_visited(self, x, y):
-        self.grid[x][y].is_visited = True
+        """
+        Set location on map to visited
+        :param x:
+        :param y:
+        :return:
+        """
+        if self.grid[x][y] is not None:
+            self.grid[x][y].is_visited = True
+        else:
+            return None
 
     def move_player(self, direction):
+        """
+        Move the player in a specific direction
+        :param direction:
+        :return:
+        """
         if direction == "w":
             self.player_y -= 1
         elif direction == "s":
@@ -43,9 +71,17 @@ class Map:
         self.set_visited(self.player_x, self.player_y)
 
     def get_player_location(self):
+        """
+        Get the current location of the player
+        :return: tuple(x, y) coordinates of the player
+        """
         return self.player_x, self.player_y
 
     def display_map(self):
+        """
+        Displays a string representation of the map grid
+        :return: str: String representation of the map grid
+        """
         grid_str = ''
         for row in self.grid:
             for co in row:
@@ -57,21 +93,11 @@ class Map:
         return grid_str
 
     def get_location(self, x, y) -> Location:
+        """
+        Get the location object at the specific coordinates
+        :param x:
+        :param y:
+        :return: Location object at the coordinates provided by (x, y)
+        """
         return self.grid[x][y]
-
-    def add_locations_from_file(self, file_name):
-        with open(file_name, 'r') as f:
-            data = json.load(f)
-        locations_data = data['locations']
-        for location_data in locations_data:
-            location = Location(
-                location_data['id'],
-                location_data['name'],
-                location_data['description'],
-                None,
-                [Item(*item.values()) for item in location_data['items']
-                 if isinstance(item, dict)
-                 ]
-            )
-
 

@@ -1,7 +1,15 @@
 
 
 class Prompt:
+    """Class representing the prompts in the json file"""
     def __init__(self, id, prompt, response):
+        """
+        Initialize the prompt.
+
+        :param id:
+        :param prompt:
+        :param response:
+        """
         self.id = id
         self.prompt = prompt
         self.response = response
