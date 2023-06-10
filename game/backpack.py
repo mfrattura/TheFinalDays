@@ -84,7 +84,7 @@ class BackPack:
                 left = mid + 1
             else:
                 right = mid - 1
-        return False
+        return -1
 
     def in_backpack(self, bag_item):
         """
@@ -95,6 +95,5 @@ class BackPack:
         for item in self._backpack:
             if item.name == bag_item:
                 return True
-            else:
-                return False
+        return False
 
